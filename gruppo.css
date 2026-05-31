@@ -1,0 +1,102 @@
+.back-btn {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: 100;
+    color: #c8a46b;
+    text-decoration: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+    background: rgba(13,16,23,0.7);
+    padding: 8px 16px;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+}
+
+.back-btn:hover {
+    color: #f5f1ea;
+    background: rgba(13,16,23,0.9);
+}
+
+.gruppo-hero {
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.gruppo-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(13,16,23,0.85) 100%);
+    z-index: 1;
+}
+
+.casa-hero { background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750'); }
+.bigfamily-hero { background-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac'); }
+.sbandati-hero { background-image: url('https://images.unsplash.com/photo-1523580494863-6f3031224c94'); }
+.costanti-hero { background-image: url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d'); }
+.cornettino-hero { background-image: url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7'); }
+.basket-hero { background-image: url('https://images.unsplash.com/photo-1546519638-68e109498ffc'); }
+.raclette-hero { background-image: url('https://images.unsplash.com/photo-1467003909585-2f8a72700288'); }
+.capitoli-hero { background-image: url('https://images.unsplash.com/photo-1474552226712-ac0f0961a954'); }
+
+.gruppo-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.gruppo-categoria {
+    font-size: 0.9rem;
+    letter-spacing: 5px;
+    color: #c8a46b;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.gruppo-hero-content h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    color: #f5f1ea;
+}
+
+.gruppo-frase {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #c8a46b;
+}
+
+.gruppo-body {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 6%;
+}
+
+.gruppo-intro {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #b8b2aa;
+    text-align: center;
+    margin-bottom: 60px;
+    line-height: 1.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .gruppo-hero-content h1 { font-size: 2.5rem; }
+    .gruppo-intro { font-size: 1rem; }
+}

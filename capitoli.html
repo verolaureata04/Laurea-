@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitoli a parte — Veronica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gruppo.css">
+</head>
+<body>
+
+    <a href="index.html#categorie" class="back-btn">← Torna indietro</a>
+
+    <section class="gruppo-hero capitoli-hero">
+        <div class="overlay"></div>
+        <div class="gruppo-hero-content">
+            <p class="gruppo-categoria">Amici</p>
+            <h1>📖 Capitoli a parte</h1>
+            <p class="gruppo-frase">Storie che meritano una pagina tutta loro.</p>
+        </div>
+    </section>
+
+    <section class="gruppo-body">
+
+        <p class="gruppo-intro">
+            Ci sono persone che non rientrano in nessuna categoria 
+            perché hanno avuto un posto tutto loro. Storie a parte, 
+            capitoli speciali.
+        </p>
+
+        <div class="cards">
+
+            <div class="card" onclick="location.href='davide.html'" style="cursor:pointer;">
+                <h4>Davide</h4>
+                <p>Scrivi una frase breve.</p>
+            </div>
+
+            <div class="card" onclick="location.href='laura.html'" style="cursor:pointer;">
+                <h4>Laura</h4>
+                <p>Scrivi una frase breve.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Con amore — Veronica</p>
+        <p class="footer-anno">2025</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.15 });
+        document.querySelectorAll(".card").forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+
+</body>
+</html>

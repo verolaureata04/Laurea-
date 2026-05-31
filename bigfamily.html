@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Family — Veronica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gruppo.css">
+</head>
+<body>
+
+    <a href="index.html#categorie" class="back-btn">← Torna indietro</a>
+
+    <section class="gruppo-hero bigfamily-hero">
+        <div class="overlay"></div>
+        <div class="gruppo-hero-content">
+            <p class="gruppo-categoria">Famiglia</p>
+            <h1>👨‍👩‍👧‍👦 Big Family</h1>
+            <p class="gruppo-frase">I parenti presenti nel mio percorso.</p>
+        </div>
+    </section>
+
+    <section class="gruppo-body">
+
+        <p class="gruppo-intro">
+            Non sempre si è vicini ogni giorno, ma ci sono persone che 
+            fanno parte della tua storia anche solo esserci nei momenti che contano.
+        </p>
+
+        <div class="cards">
+
+            <div class="card" onclick="location.href='parente1.html'" style="cursor:pointer;">
+                <h4>Nome parente</h4>
+                <p>Scrivi una frase breve.</p>
+            </div>
+
+            <div class="card" onclick="location.href='parente2.html'" style="cursor:pointer;">
+                <h4>Nome parente</h4>
+                <p>Scrivi una frase breve.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Con amore — Veronica</p>
+        <p class="footer-anno">2025</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.15 });
+        document.querySelectorAll(".card").forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+
+</body>
+</html>

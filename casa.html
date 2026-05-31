@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa — Veronica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gruppo.css">
+</head>
+<body>
+
+    <a href="index.html#categorie" class="back-btn">← Torna indietro</a>
+
+    <section class="gruppo-hero casa-hero">
+        <div class="overlay"></div>
+        <div class="gruppo-hero-content">
+            <p class="gruppo-categoria">Famiglia</p>
+            <h1>🏠 Casa</h1>
+            <p class="gruppo-frase">Le fondamenta. La parte più intima ed emotiva.</p>
+        </div>
+    </section>
+
+    <section class="gruppo-body">
+
+        <p class="gruppo-intro">
+            Scrivi qui una dedica generale al gruppo Casa — qualcosa che li descriva tutti insieme, 
+            un ricordo collettivo, la sensazione di tornare a casa.
+        </p>
+
+        <div class="cards">
+
+            <div class="card" onclick="location.href='mamma.html'" style="cursor:pointer;">
+                <h4>Mamma</h4>
+                <p>Grazie per esserci sempre stata ❤️</p>
+            </div>
+
+            <div class="card" onclick="location.href='papa.html'" style="cursor:pointer;">
+                <h4>Papà</h4>
+                <p>Per ogni sacrificio fatto.</p>
+            </div>
+
+            <div class="card" onclick="location.href='fratello.html'" style="cursor:pointer;">
+                <h4>Nome fratello/sorella</h4>
+                <p>Scrivi una frase breve.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Con amore — Veronica</p>
+        <p class="footer-anno">2025</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll(".card").forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+
+</body>
+</html>

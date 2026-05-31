@@ -1,0 +1,140 @@
+.back-btn {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: 100;
+    color: #c8a46b;
+    text-decoration: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+    background: rgba(13,16,23,0.7);
+    padding: 8px 16px;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+}
+
+.back-btn:hover {
+    color: #f5f1ea;
+    background: rgba(13,16,23,0.9);
+}
+
+.persona-hero {
+    height: 60vh;
+    background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.persona-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(13,16,23,0.85) 100%);
+    z-index: 1;
+}
+
+.persona-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.persona-categoria {
+    font-size: 0.9rem;
+    letter-spacing: 5px;
+    color: #c8a46b;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.persona-hero-content h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    color: #f5f1ea;
+}
+
+.persona-frase {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #c8a46b;
+}
+
+.persona-body {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 80px 6%;
+}
+
+.persona-video {
+    margin-bottom: 80px;
+}
+
+.persona-video video {
+    width: 100%;
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+
+.persona-testo h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    color: #c8a46b;
+}
+
+.persona-testo p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #b8b2aa;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.persona-foto {
+    margin-top: 80px;
+}
+
+.persona-foto h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    color: #c8a46b;
+}
+
+.foto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+}
+
+.foto-grid img {
+    width: 100%;
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,0.04);
+    aspect-ratio: 1;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.foto-grid img:hover {
+    border-color: rgba(200,164,107,0.3);
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .persona-hero-content h1 { font-size: 2.5rem; }
+    .foto-grid { grid-template-columns: 1fr 1fr; }
+}
