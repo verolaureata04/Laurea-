@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gli Sbandati — Veronica</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="gruppo.css">
+    <link rel="stylesheet" href="sbandati.css">
 </head>
 <body>
 
@@ -17,25 +19,63 @@
         <div class="gruppo-hero-content">
             <p class="gruppo-categoria">Amici</p>
             <h1>🎓 Gli Sbandati</h1>
-            <p class="gruppo-frase">Il gruppo università.</p>
+            <p class="gruppo-frase">Una molisana, un calabrese, una napoletana e una scafatese.</p>
         </div>
     </section>
 
     <section class="gruppo-body">
 
-        <p class="gruppo-intro">
-            Scrivi qui una dedica generale al gruppo — 
-            quei momenti in aula, le sessioni di panico, 
-            le risate tra un esame e l'altro.
-        </p>
+        <div class="dedica-collettiva">
+            <p>Beh che dire, sbandati del mio cuore,</p>
+            <p>È appena finito un capitolo che, inutile dirlo, non sarebbe stato lo stesso senza di voi.</p>
+            <p>Una molisana, un calabrese, una napoletana e una scafatese (Giu mi dispiace ma ti dobbiamo chiamare per quel che sei). Già detta così fa sorridere. Eppure, in qualche modo, eccoci qui, tre anni dopo.</p>
+            <p>Tra lezioni, esami, sessioni infinite, momenti di sconforto e risate nei momenti meno opportuni, abbiamo condiviso molto più di quanto probabilmente ci aspettassimo all'inizio.</p>
+            <p>Non so se siamo mai stati il gruppo universitario modello, ma forse è proprio questo il bello. In mezzo al caos di questi anni siete diventati una presenza costante, una di quelle che finiscono per far parte dei ricordi senza nemmeno accorgersene.</p>
+            <p>Tra qualche anno probabilmente ci ricorderemo poco di molti esami, ma sono abbastanza sicura che continueremo a raccontare gli aneddoti, le risate e i momenti assurdi che abbiamo vissuto insieme.</p>
+            <p>Grazie per essere stati, magari senza nemmeno accorgervene, un punto di riferimento durante questi anni. Per tutte le volte in cui siete riusciti a trasformare una giornata pesante in una più leggera e a ricordarmi che, in fondo, non stavo affrontando tutto questo da sola.</p>
+        </div>
 
-        <div class="cards">
-
-            <div class="card" onclick="location.href='persona.html'" style="cursor:pointer;">
-                <h4>Nome</h4>
-                <p>Scrivi una frase breve.</p>
+        <div class="gruppo-foto">
+            <h2>I nostri ricordi</h2>
+            <div class="foto-grid">
+                <img src="foto/sbandati1.jpg" alt="Foto Gli Sbandati">
+                <img src="foto/sbandati2.jpg" alt="Foto Gli Sbandati">
+                <img src="foto/sbandati3.jpg" alt="Foto Gli Sbandati">
+                <img src="foto/sbandati4.jpg" alt="Foto Gli Sbandati">
             </div>
+        </div>
 
+        <div class="divisore"></div>
+
+        <div class="persona-singola">
+            <h2>Agata</h2>
+            <p class="persona-singola-testo">Scrivi qui il tuo messaggio per Agata.</p>
+            <div class="foto-grid-small">
+                <img src="foto/agata1.jpg" alt="Foto con Agata">
+                <img src="foto/agata2.jpg" alt="Foto con Agata">
+            </div>
+        </div>
+
+        <div class="divisore"></div>
+
+        <div class="persona-singola">
+            <h2>Nino</h2>
+            <p class="persona-singola-testo">Scrivi qui il tuo messaggio per Nino.</p>
+            <div class="foto-grid-small">
+                <img src="foto/nino1.jpg" alt="Foto con Nino">
+                <img src="foto/nino2.jpg" alt="Foto con Nino">
+            </div>
+        </div>
+
+        <div class="divisore"></div>
+
+        <div class="persona-singola">
+            <h2>Giusi</h2>
+            <p class="persona-singola-testo">Scrivi qui il tuo messaggio per Giusi.</p>
+            <div class="foto-grid-small">
+                <img src="foto/giusi1.jpg" alt="Foto con Giusi">
+                <img src="foto/giusi2.jpg" alt="Foto con Giusi">
+            </div>
         </div>
 
     </section>
@@ -44,19 +84,6 @@
         <p>Con amore — Veronica</p>
         <p class="footer-anno">2026</p>
     </footer>
-
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
-            });
-        }, { threshold: 0.15 });
-        document.querySelectorAll(".card").forEach(card => {
-            observer.observe(card);
-        });
-    </script>
 
 </body>
 </html>

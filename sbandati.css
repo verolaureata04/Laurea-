@@ -1,0 +1,102 @@
+.dedica-collettiva {
+    max-width: 700px;
+    margin: 0 auto 80px auto;
+    text-align: center;
+}
+
+.dedica-collettiva p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #b8b2aa;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.gruppo-foto {
+    margin-bottom: 80px;
+}
+
+.gruppo-foto h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    color: #c8a46b;
+    text-align: center;
+}
+
+.foto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.foto-grid img {
+    width: 100%;
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,0.04);
+    aspect-ratio: 1;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.foto-grid img:hover {
+    border-color: rgba(200,164,107,0.3);
+    transform: scale(1.02);
+}
+
+.divisore {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c8a46b, transparent);
+    margin: 80px auto;
+}
+
+.persona-singola {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.persona-singola h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: #f5f1ea;
+    margin-bottom: 20px;
+}
+
+.persona-singola-testo {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #b8b2aa;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.foto-grid-small {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.foto-grid-small img {
+    width: 100%;
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,0.04);
+    aspect-ratio: 1;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.foto-grid-small img:hover {
+    border-color: rgba(200,164,107,0.3);
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .foto-grid { grid-template-columns: 1fr 1fr; }
+    .persona-singola h2 { font-size: 2rem; }
+}
